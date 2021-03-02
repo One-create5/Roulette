@@ -65,14 +65,15 @@ namespace Roulette
         {
             Console.WriteLine("\tRoulette Board");
             Console.Write("     ");
-            PrintHorizontalLines(20);        
-            Console.WriteLine($"     |{numbers[numbers.Length-2]} {color[color.Length-2]} | {numbers[numbers.Length-1]} {color[color.Length -1]}|");
+            PrintHorizontalLines(20);
+            Console.WriteLine($"     |{numbers[numbers.Length - 2]} {color[color.Length - 2]} | {numbers[numbers.Length - 1]} {color[color.Length - 1]}|");
             PrintHorizontalLines(32);
-            for (int i = 0; i < 36; i+=3)
+            for (int i = 0; i < 36; i += 3)
             {
-                Console.WriteLine(String.Format("|{0,-2} {1,-5} | {2,-2} {3,-5} | {4,-2} {5,-5}|",numbers[i], color[i], numbers[i + 1], color[i + 1], numbers[i + 2], color[i + 2]));
+                Console.WriteLine(String.Format("|{0,-2} {1,-5} | {2,-2} {3,-5} | {4,-2} {5,-5}|", numbers[i], color[i], numbers[i + 1], color[i + 1], numbers[i + 2], color[i + 2]));
                 PrintHorizontalLines(32);
             }
+
         }
 
 

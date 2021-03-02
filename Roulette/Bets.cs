@@ -6,6 +6,8 @@ namespace Roulette
 {
     public static class Bets
     {
+
+
         public static bool BetNumber(int bet, (string number, string color) ball)
         {
             if (bet != ReturnInt(ball)) return false;
@@ -186,7 +188,5 @@ namespace Roulette
         {
             return Int32.Parse(ball.number);
         }
-
-
     }
 }
