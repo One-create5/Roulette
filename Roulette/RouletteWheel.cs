@@ -37,42 +37,26 @@ namespace Roulette
         }
         private string[] GetColors() 
         {
-            string[] color = new string[38];
+            
             string red = "red";
             string black = "black";
             string green = "green";
-            rand = new Random();
-            int checkRand;
-            int redCheck = 0;
-            int blackCheck = 0;
+            string[] color = 
+                { red, black,red,
+                  black,red,black,
+                  red, black,red,
+                  black,black,red,
+                  black,red,black,
+                  red, black,red,
+                  red, black,red,
+                  black,red,black,
+                  red, black,red,
+                  black,black,red,
+                  black,red,black,
+                  red, black,red,
+                  green,green
+                  };
 
-            for (int i = 0; i < color.Length -2; i++)
-            {
-                checkRand = rand.Next(1,3);
-
-                if (checkRand == 1 && redCheck < 18)
-                {
-                    color[i] = red;
-                    redCheck++;
-                }
-                else
-                {
-                    if (blackCheck < 18)
-                    {
-                        color[i] = black;
-                        blackCheck++;
-                    }
-                    else 
-                    {
-                        color[i] = red;
-                        redCheck++;
-                    }
-                    
-                }
-            }
-
-            color[color.Length - 2] = green;
-            color[color.Length - 1] = green;
 
             return color;
         }
@@ -103,6 +87,7 @@ namespace Roulette
 
         public (string number, string color) SpinWheel() 
         {
+            rand = new Random();
             Ball = rand.Next(1,39);
 
             string _00 = "00";
@@ -122,7 +107,7 @@ namespace Roulette
         }
 
         
-        public void PrintNumbers() 
+        private void PrintNumbers() 
         {
             foreach (var item in numbers)
             {
@@ -130,7 +115,7 @@ namespace Roulette
             }
         }
 
-        public void PrintColors() 
+        private void PrintColors() 
         {
             foreach (var item in color)
             {
